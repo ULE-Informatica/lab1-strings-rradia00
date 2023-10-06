@@ -31,7 +31,7 @@ void gets_example_func(void) {
   char buf[BUFFER_MAX_SIZE];
  
   if (fgets(buf, sizeof(buf), stdin) == NULL) {
-        return 1;
+     printf("Ha ocurrido un error");
   }
   buf[strlen(buf) - 1] = '\0';
 }
@@ -50,7 +50,7 @@ void get_y_or_n(void) {
 	char response[8];
 
 	printf("Continue? [y] n: ");  
-	gets(response);
+	fgets (response, sizeof(response), stdin);
 
 	if (response[0] == 'n') 
 		exit(0);  
