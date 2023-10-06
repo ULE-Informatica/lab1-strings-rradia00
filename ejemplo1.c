@@ -21,7 +21,7 @@ char array2[] = { 'F', 'o', 'o', 'b', 'a', 'r', '\0' };
  
 enum { BUFFER_MAX_SIZE = 1024 };
  
-const char* s1 = R"foo(
+const char* s1 ="foo(
 Hello
 World
 )foo";
