@@ -56,8 +56,6 @@ PRACTICA STRINGS - REBECA RADÍO
 
 								COMPILAR CON GCC 
 
-
-
 EJEMPLO 2 - ESTANDAR C11
 
 El primer error que se debe corregir se encuentra en la función OptionThree() ya que se está 
@@ -75,6 +73,7 @@ Por ello, como hemos puesto que es exactamente la longitud de la cadena, aparece
 La función strcpy debe ser sustituida por strncpy en el resto del codigo, es decir, en las funciones OPtionOne() y OPtionTwo(). 
 
 								COMPILAR CON GCC++
+Al compilar el ejemplo 2 con GCC++11, no se muestra ningun error. 
 
 
 								
