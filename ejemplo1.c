@@ -34,12 +34,15 @@ void gets_example_func(void) {
 }
 
 const char *get_dirname(const char *pathname) {
+  char *path_copia = strdup (pathname); //copiamos la cadena 
   char *slash;
-  slash = strrchr(pathname, '/');
+  //slash = strrchr(pathname, '/');
   if (slash) {
     *slash = '\0'; /* Undefined behavior */
   }
-  return pathname;
+  const char *result = strdup(path_copia);
+  free(path_copia);
+  return result;
 }
  
 
