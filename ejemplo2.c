@@ -34,9 +34,9 @@ void optionThree(){
 }
 
 void optionFour(){
-    char *s = (char *) malloc(18);
-    strncpy(s, "Welcome Sanitizer!", 17);
-    s[17] = '\0';
+    char *s = (char *) malloc(20);
+    strncpy(s, "Welcome Sanitizer!", 19);
+    s[19] = '\0';
     printf("string is: %s\n", s);
     free(s);
 }
