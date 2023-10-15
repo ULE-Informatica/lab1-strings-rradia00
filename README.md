@@ -16,6 +16,8 @@ Además, teniendo en cuenta lo que se ha dicho en clase, la función gets ha sid
 
 En este codigo, existen varias variables que no se utilizan, por ello he comentado todas aquellas declaraciones de variables que no se usan para evitar errores o warnings de tipo unused variable. 
 
+El puntero slash debe ser inicializado a null para que compile sin warnings ni errores. En caso de GCC++ será inicializado a nullptr en lugar de NULL.  
+
 								COMPILAR CON GCC++ 
 
 Partiendo del codigo corregido anterior, veremos lo que ocurre cuando compilamos con GCC++
@@ -73,6 +75,7 @@ Por ello, como hemos puesto que es exactamente la longitud de la cadena, aparece
 La función strcpy debe ser sustituida por strncpy en el resto del codigo, es decir, en las funciones OPtionOne() y OPtionTwo(). 
 
 								COMPILAR CON GCC++
+
 Al compilar el ejemplo 2 con GCC++11, no se muestra ningun error. 
 
 
