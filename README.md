@@ -47,5 +47,24 @@ La función strcpy debe ser sustituida por strncpy en el resto del codigo, es de
 Partiendo del codigo corregido anterior, veremos lo que ocurre cuando compilamos con GCC++
 
 EJEMPLO 1 - ESTANDAR GCC++11
+El primer error que se puede observar es que estamos intenntando modificar una cadena que es una constante en una funcion que se llama "get_dirname". El problema es que la funcion strrchr devuelve un puntero de tipo const cgar porque no permite modificar el contenido de la cadena y por eso no puedo modificar la cadena que está siendo apuntada por pathname.  Para solucionar este problema he copiado la cadena y así puedo trabajar con la copia en lugar de modificar la cadena original. La funcion queda de la siguiente manera:
+ 
+ 			const char *get_dirname(const char *pathname) {
+ 			char *path_copia = strdup (pathname); //copiamos la cadena 
+  			char *slash;
+			//slash = strrchr(pathname, '/');
+ 			if (slash) {
+    			*slash = '\0'; /* Undefined behavior */
+  			}
+  			const char *result = strdup(path_copia);
+  			free(path_copia);
+  			return result;
+			}
+ 
+ El siguiente error que aparece tiene que ver con la linea: 
+ 							char *ptr_char  = "new string literal";  
+Esto se debe a que estamos intentando asignar una cadena que esta declarada como una constante a un puntero que es de tipo char. Para solucionar este error he declarado ptr_char como un puntero constante. 
+Al transformarlo en un puntero constante no podré modificarla posteriormente, por ello para modificarla se debe hacer una copia de la cadena en el bufer. 
+
 
 
