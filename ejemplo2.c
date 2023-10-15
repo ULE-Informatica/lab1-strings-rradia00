@@ -24,14 +24,14 @@ void optionThree(){
      s=NULL;
     
     s = (char *) malloc(100); //asignamos memoria nuevamente 
-    strcpy(s, "Welcome Sanitizer!");
+    strncpy(s, "Welcome Sanitizer!", 18);
     printf("string is: %s\n", s);
     free(s);
 }
 
 void optionFour(){
     char *s = (char *) malloc(18);
-    strcpy(s,  "Welcome Sanitizer!");
+    strncpy(s, "Welcome Sanitizer!", 18);
     printf("string is: %s\n", s);
     free(s);
 }
