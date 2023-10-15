@@ -15,6 +15,7 @@ void optionTwo(){
     char *s = (char *) malloc(100);
     strcpy(s, "Welcome Sanitizer!");
     printf("string is: %s\n", s);
+    free(s);
 }
 
 void optionThree(){
@@ -25,6 +26,7 @@ void optionThree(){
     
     s = (char *) malloc(100); //asignamos memoria nuevamente 
     strncpy(s, "Welcome Sanitizer!", 18);
+    s[17] = '\0';
     printf("string is: %s\n", s);
     free(s);
 }
@@ -32,6 +34,7 @@ void optionThree(){
 void optionFour(){
     char *s = (char *) malloc(18);
     strncpy(s, "Welcome Sanitizer!", 18);
+    s[17] = '\0';
     printf("string is: %s\n", s);
     free(s);
 }
