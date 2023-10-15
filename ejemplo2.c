@@ -14,7 +14,7 @@ void optionOne(){
 
 void optionTwo(){
     char *s = (char *) malloc(100);
-    strcpy(s, "Welcome Sanitizer!", 99);
+    strncpy(s, "Welcome Sanitizer!", 99);
     s[99] = '\0';
     printf("string is: %s\n", s);
     free(s);

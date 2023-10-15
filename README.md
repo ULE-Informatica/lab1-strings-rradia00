@@ -43,6 +43,7 @@ Al transformarlo en un puntero constante no podré modificarla posteriormente, p
 
 El siguiente error se debe a que no está inicialiazo el puntero slash. Por ello lo inicializamos de esta manera: char *slash = nullptr;
 
+En ambos casos, aparece un ultimo warning al compilar unused parameter que indica que la variable argc no se utiliza en la funcion main. 
 
 
 ## ejemplo2.c. Program Instrumentation
@@ -72,6 +73,8 @@ Ahora, lo que se debe corregir se encuentra en la funcion optionFour(), y de nue
 Por ello, como hemos puesto que es exactamente la longitud de la cadena, aparece un warning ya que si metemos la longitud exacta la funcion strncpy no añade el caracter de terminación \0. Para solucionar esto, ponemos una reserva de espacio de memoria de 20 caracteres y copiamos la cadena de 18 caracteres maximo. De esta forma se añade el caracter nulo de terminacion \0 y no sale ningun warning. 
 
 La función strcpy debe ser sustituida por strncpy en el resto del codigo, es decir, en las funciones OPtionOne() y OPtionTwo(). 
+
+								COMPILAR CON GCC++
 
 
 								
