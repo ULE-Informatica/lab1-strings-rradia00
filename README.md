@@ -66,5 +66,7 @@ El primer error que se puede observar es que estamos intenntando modificar una c
 Esto se debe a que estamos intentando asignar una cadena que esta declarada como una constante a un puntero que es de tipo char. Para solucionar este error he declarado ptr_char como un puntero constante. 
 Al transformarlo en un puntero constante no podré modificarla posteriormente, por ello para modificarla se debe hacer una copia de la cadena en el bufer. 
 
+El siguiente error se debe a que no está inicialiazo el puntero slash. Por ello lo inicializamos de esta manera: char *slash = nullptr;
+
 
 
